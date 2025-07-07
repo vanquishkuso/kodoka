@@ -1,5 +1,6 @@
-import { locales, type Locale } from '@/lib/i18n';
-import { notFound } from 'next/navigation';
+import { locales, type Locale } from "@/lib/i18n";
+import { notFound } from "next/navigation";
+import "@/app/globals.css";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -7,7 +8,7 @@ export async function generateStaticParams() {
 
 export default function LocaleLayout({
   children,
-  params: { locale }
+  params: { locale },
 }: {
   children: React.ReactNode;
   params: { locale: Locale };
