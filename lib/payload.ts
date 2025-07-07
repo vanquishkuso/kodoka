@@ -1,5 +1,5 @@
-import { getPayloadClient } from 'payload/dist/payload';
-import configPromise from '../payload.config';
+import { getPayloadClient } from "payload/dist/payload";
+import configPromise from "../OLD-payload.config";
 
 let cached = (global as any).payload;
 
