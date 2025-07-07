@@ -6,15 +6,15 @@ import { ThemeProvider } from "@/components/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AnalytiX Pro - Transform Your Data Into Actionable Insights",
+  title: "Kodoka - Transform Your Data Into Actionable Insights",
   description:
     "Expert analytics implementation and optimization services for Google Analytics, Matomo, and custom solutions. We also build modern websites and e-commerce platforms.",
   keywords:
     "analytics, Google Analytics, Matomo, data analysis, business intelligence, conversion optimization, web development, e-commerce",
-  authors: [{ name: "AnalytiX Pro" }],
+  authors: [{ name: "Kodoka" }],
   viewport: "width=device-width, initial-scale=1",
   openGraph: {
-    title: "AnalytiX Pro - Transform Your Data Into Actionable Insights",
+    title: "Kodoka - Transform Your Data Into Actionable Insights",
     description:
       "Expert analytics implementation and optimization services for Google Analytics, Matomo, and custom solutions.",
     type: "website",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AnalytiX Pro - Transform Your Data Into Actionable Insights",
+    title: "Kodoka - Transform Your Data Into Actionable Insights",
     description:
       "Expert analytics implementation and optimization services for Google Analytics, Matomo, and custom solutions.",
   },

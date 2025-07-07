@@ -113,47 +113,47 @@ export default function Home({ params }: HomeProps) {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-gray-950">
+    <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800/50 sticky top-0 z-50">
+      <header className="bg-background/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800/50 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <BarChart3 className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold text-gray-900 dark:text-white">
-                AnalytiX Pro
+                Kodoka
               </span>
             </div>
             <nav className="hidden md:flex space-x-8">
               <a
                 href="#services"
-                className="text-gray-600 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors"
+                className="text-gray-600 dark:text-gray-300 hover:text-primary hover:text-primary/80 transition-colors"
               >
                 {t.nav.services}
               </a>
               <a
                 href="#features"
-                className="text-gray-600 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors"
+                className="text-gray-600 dark:text-gray-300 hover:text-primary hover:text-primary/80 transition-colors"
               >
                 {t.nav.features}
               </a>
               <a
                 href="#pricing"
-                className="text-gray-600 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors"
+                className="text-gray-600 dark:text-gray-300 hover:text-primary hover:text-primary/80 transition-colors"
               >
                 {t.nav.pricing}
               </a>
               <a
                 href="#testimonials"
-                className="text-gray-600 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors"
+                className="text-gray-600 dark:text-gray-300 hover:text-primary hover:text-primary/80 transition-colors"
               >
                 {t.nav.testimonials}
               </a>
               <a
                 href="#contact"
-                className="text-gray-600 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors"
+                className="text-gray-600 dark:text-gray-300 hover:text-primary hover:text-primary/80 transition-colors"
               >
                 {t.nav.contact}
               </a>
@@ -161,7 +161,7 @@ export default function Home({ params }: HomeProps) {
             <div className="flex items-center space-x-2">
               <ThemeToggle />
               <LanguageSwitcher currentLocale={locale} />
-              <Button className="bg-red-600 hover:bg-red-700 text-white">
+              <Button className="bg-primary hover:bg-red-700 text-white">
                 {t.nav.getStarted}
               </Button>
             </div>
@@ -175,13 +175,13 @@ export default function Home({ params }: HomeProps) {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <Badge className="hero-badge bg-red-100 dark:bg-red-950 text-red-800 dark:text-red-200 hover:bg-red-200 dark:hover:bg-red-900">
+                <Badge className="hero-badge bg-primary/10 text-red-800 dark:text-red-200 hover:bg-red-200 dark:hover:bg-red-900">
                   <TrendingUp className="w-4 h-4 mr-2" />
                   {t.hero.badge}
                 </Badge>
                 <h1 className="hero-title text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
                   {t.hero.title}
-                  <span className="text-red-600"> {t.hero.titleHighlight}</span>
+                  <span className="text-primary"> {t.hero.titleHighlight}</span>
                 </h1>
                 <p className="hero-description text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
                   {t.hero.description}
@@ -190,7 +190,7 @@ export default function Home({ params }: HomeProps) {
               <div className="hero-buttons flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-6"
+                  className="bg-primary hover:bg-red-700 text-white text-lg px-8 py-6"
                 >
                   {t.hero.cta}
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -208,7 +208,7 @@ export default function Home({ params }: HomeProps) {
                   <div className="text-2xl font-bold text-gray-900 dark:text-white">
                     500+
                   </div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">
+                  <div className="text-sm text-muted-foreground">
                     {t.hero.stats.projects}
                   </div>
                 </div>
@@ -216,7 +216,7 @@ export default function Home({ params }: HomeProps) {
                   <div className="text-2xl font-bold text-gray-900 dark:text-white">
                     98%
                   </div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">
+                  <div className="text-sm text-muted-foreground">
                     {t.hero.stats.satisfaction}
                   </div>
                 </div>
@@ -224,19 +224,19 @@ export default function Home({ params }: HomeProps) {
                   <div className="text-2xl font-bold text-gray-900 dark:text-white">
                     5+
                   </div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">
+                  <div className="text-sm text-muted-foreground">
                     {t.hero.stats.experience}
                   </div>
                 </div>
               </div>
             </div>
             <div className="relative">
-              <div className="hero-card bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-2xl">
+              <div className="hero-card bg-background p-8 rounded-2xl shadow-2xl">
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="bg-red-50 dark:bg-red-950/50 p-4 rounded-lg">
                     <div className="flex items-center justify-between mb-2">
-                      <Users className="w-6 h-6 text-red-600" />
-                      <span className="text-sm text-gray-600 dark:text-gray-400">
+                      <Users className="w-6 h-6 text-primary" />
+                      <span className="text-sm text-muted-foreground">
                         Monthly Users
                       </span>
                     </div>
@@ -250,7 +250,7 @@ export default function Home({ params }: HomeProps) {
                   <div className="bg-green-50 dark:bg-green-950/50 p-4 rounded-lg">
                     <div className="flex items-center justify-between mb-2">
                       <Target className="w-6 h-6 text-green-600" />
-                      <span className="text-sm text-gray-600 dark:text-gray-400">
+                      <span className="text-sm text-muted-foreground">
                         Conversion Rate
                       </span>
                     </div>
@@ -264,7 +264,7 @@ export default function Home({ params }: HomeProps) {
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600 dark:text-gray-400">
+                    <span className="text-sm text-muted-foreground">
                       Revenue Growth
                     </span>
                     <span className="text-sm font-semibold text-green-600">
@@ -272,11 +272,11 @@ export default function Home({ params }: HomeProps) {
                     </span>
                   </div>
                   <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                    <div className="bg-red-600 h-2 rounded-full w-3/4"></div>
+                    <div className="bg-primary h-2 rounded-full w-3/4"></div>
                   </div>
                 </div>
               </div>
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-red-600 rounded-full flex items-center justify-center">
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary rounded-full flex items-center justify-center">
                 <BarChart3 className="w-12 h-12 text-white" />
               </div>
             </div>
@@ -285,10 +285,10 @@ export default function Home({ params }: HomeProps) {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-white dark:bg-gray-900">
+      <section id="services" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="bg-red-100 dark:bg-red-950 text-red-800 dark:text-red-200 mb-4">
+            <Badge className="bg-primary/10 text-red-800 dark:text-red-200 mb-4">
               {t.services.badge}
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -299,10 +299,10 @@ export default function Home({ params }: HomeProps) {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="service-card group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 dark:bg-gray-800 dark:border-gray-700">
+            <Card className="service-card group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 dark:bg-muted border-input">
               <CardHeader>
-                <div className="w-12 h-12 bg-red-100 dark:bg-red-950 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-600 transition-all">
-                  <Globe className="w-6 h-6 text-red-600 group-hover:text-white" />
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary transition-all">
+                  <Globe className="w-6 h-6 text-primary group-hover:text-white" />
                 </div>
                 <CardTitle className="dark:text-white">
                   {t.services.analytics.title}
@@ -312,7 +312,7 @@ export default function Home({ params }: HomeProps) {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                <ul className="space-y-2 text-sm text-muted-foreground">
                   {t.services.analytics.features.map((feature, index) => (
                     <li key={index} className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
@@ -323,10 +323,10 @@ export default function Home({ params }: HomeProps) {
               </CardContent>
             </Card>
 
-            <Card className="service-card group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 dark:bg-gray-800 dark:border-gray-700">
+            <Card className="service-card group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 dark:bg-muted border-input">
               <CardHeader>
-                <div className="w-12 h-12 bg-red-100 dark:bg-red-950 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-600 transition-all">
-                  <Shield className="w-6 h-6 text-red-600 group-hover:text-white" />
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary transition-all">
+                  <Shield className="w-6 h-6 text-primary group-hover:text-white" />
                 </div>
                 <CardTitle className="dark:text-white">
                   {t.services.matomo.title}
@@ -336,7 +336,7 @@ export default function Home({ params }: HomeProps) {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                <ul className="space-y-2 text-sm text-muted-foreground">
                   {t.services.matomo.features.map((feature, index) => (
                     <li key={index} className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
@@ -347,10 +347,10 @@ export default function Home({ params }: HomeProps) {
               </CardContent>
             </Card>
 
-            <Card className="service-card group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 dark:bg-gray-800 dark:border-gray-700">
+            <Card className="service-card group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 dark:bg-muted border-input">
               <CardHeader>
-                <div className="w-12 h-12 bg-red-100 dark:bg-red-950 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-600 transition-all">
-                  <Code className="w-6 h-6 text-red-600 group-hover:text-white" />
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary transition-all">
+                  <Code className="w-6 h-6 text-primary group-hover:text-white" />
                 </div>
                 <CardTitle className="dark:text-white">
                   {t.services.websites.title}
@@ -360,7 +360,7 @@ export default function Home({ params }: HomeProps) {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                <ul className="space-y-2 text-sm text-muted-foreground">
                   {t.services.websites.features.map((feature, index) => (
                     <li key={index} className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
@@ -371,10 +371,10 @@ export default function Home({ params }: HomeProps) {
               </CardContent>
             </Card>
 
-            <Card className="service-card group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 dark:bg-gray-800 dark:border-gray-700">
+            <Card className="service-card group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 dark:bg-muted border-input">
               <CardHeader>
-                <div className="w-12 h-12 bg-red-100 dark:bg-red-950 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-600 transition-all">
-                  <ShoppingCart className="w-6 h-6 text-red-600 group-hover:text-white" />
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary transition-all">
+                  <ShoppingCart className="w-6 h-6 text-primary group-hover:text-white" />
                 </div>
                 <CardTitle className="dark:text-white">
                   {t.services.ecommerce.title}
@@ -384,7 +384,7 @@ export default function Home({ params }: HomeProps) {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                <ul className="space-y-2 text-sm text-muted-foreground">
                   {t.services.ecommerce.features.map((feature, index) => (
                     <li key={index} className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
@@ -395,10 +395,10 @@ export default function Home({ params }: HomeProps) {
               </CardContent>
             </Card>
 
-            <Card className="service-card group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 dark:bg-gray-800 dark:border-gray-700">
+            <Card className="service-card group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 dark:bg-muted border-input">
               <CardHeader>
-                <div className="w-12 h-12 bg-red-100 dark:bg-red-950 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-600 transition-all">
-                  <PieChart className="w-6 h-6 text-red-600 group-hover:text-white" />
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary transition-all">
+                  <PieChart className="w-6 h-6 text-primary group-hover:text-white" />
                 </div>
                 <CardTitle className="dark:text-white">
                   {t.services.custom.title}
@@ -408,7 +408,7 @@ export default function Home({ params }: HomeProps) {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                <ul className="space-y-2 text-sm text-muted-foreground">
                   {t.services.custom.features.map((feature, index) => (
                     <li key={index} className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
@@ -419,10 +419,10 @@ export default function Home({ params }: HomeProps) {
               </CardContent>
             </Card>
 
-            <Card className="service-card group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 dark:bg-gray-800 dark:border-gray-700">
+            <Card className="service-card group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 dark:bg-muted border-input">
               <CardHeader>
-                <div className="w-12 h-12 bg-red-100 dark:bg-red-950 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-600 transition-all">
-                  <Activity className="w-6 h-6 text-red-600 group-hover:text-white" />
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary transition-all">
+                  <Activity className="w-6 h-6 text-primary group-hover:text-white" />
                 </div>
                 <CardTitle className="dark:text-white">
                   {t.services.audit.title}
@@ -432,7 +432,7 @@ export default function Home({ params }: HomeProps) {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                <ul className="space-y-2 text-sm text-muted-foreground">
                   {t.services.audit.features.map((feature, index) => (
                     <li key={index} className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
@@ -447,10 +447,10 @@ export default function Home({ params }: HomeProps) {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section id="features" className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="bg-red-100 dark:bg-red-950 text-red-800 dark:text-red-200 mb-4">
+            <Badge className="bg-primary/10 text-red-800 dark:text-red-200 mb-4">
               {t.features.badge}
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -462,8 +462,8 @@ export default function Home({ params }: HomeProps) {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="feature-item text-center group">
-              <div className="w-16 h-16 bg-red-100 dark:bg-red-950 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 transition-all">
-                <Target className="w-8 h-8 text-red-600 group-hover:text-white" />
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-all">
+                <Target className="w-8 h-8 text-primary group-hover:text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                 {t.features.precision.title}
@@ -473,8 +473,8 @@ export default function Home({ params }: HomeProps) {
               </p>
             </div>
             <div className="feature-item text-center group">
-              <div className="w-16 h-16 bg-red-100 dark:bg-red-950 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 transition-all">
-                <TrendingUp className="w-8 h-8 text-red-600 group-hover:text-white" />
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-all">
+                <TrendingUp className="w-8 h-8 text-primary group-hover:text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                 {t.features.growth.title}
@@ -484,8 +484,8 @@ export default function Home({ params }: HomeProps) {
               </p>
             </div>
             <div className="feature-item text-center group">
-              <div className="w-16 h-16 bg-red-100 dark:bg-red-950 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 transition-all">
-                <Shield className="w-8 h-8 text-red-600 group-hover:text-white" />
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-all">
+                <Shield className="w-8 h-8 text-primary group-hover:text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                 {t.features.privacy.title}
@@ -495,8 +495,8 @@ export default function Home({ params }: HomeProps) {
               </p>
             </div>
             <div className="feature-item text-center group">
-              <div className="w-16 h-16 bg-red-100 dark:bg-red-950 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 transition-all">
-                <Zap className="w-8 h-8 text-red-600 group-hover:text-white" />
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-all">
+                <Zap className="w-8 h-8 text-primary group-hover:text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                 {t.features.fast.title}
@@ -510,10 +510,10 @@ export default function Home({ params }: HomeProps) {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-white dark:bg-gray-900">
+      <section id="pricing" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="bg-red-100 dark:bg-red-950 text-red-800 dark:text-red-200 mb-4">
+            <Badge className="bg-primary/10 text-red-800 dark:text-red-200 mb-4">
               {t.pricing.badge}
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -529,7 +529,7 @@ export default function Home({ params }: HomeProps) {
                 className={`text-sm ${
                   !isYearly
                     ? "text-gray-900 dark:text-white font-semibold"
-                    : "text-gray-500 dark:text-gray-400"
+                    : "text-gray-500 dark:text-muted-foreground"
                 }`}
               >
                 {t.pricing.monthly}
@@ -539,7 +539,7 @@ export default function Home({ params }: HomeProps) {
                 className="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-200 dark:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
               >
                 <span
-                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                  className={`inline-block h-4 w-4 transform rounded-full bg-background transition-transform ${
                     isYearly ? "translate-x-6" : "translate-x-1"
                   }`}
                 />
@@ -548,7 +548,7 @@ export default function Home({ params }: HomeProps) {
                 className={`text-sm ${
                   isYearly
                     ? "text-gray-900 dark:text-white font-semibold"
-                    : "text-gray-500 dark:text-gray-400"
+                    : "text-gray-500 dark:text-muted-foreground"
                 }`}
               >
                 {t.pricing.yearly}
@@ -563,7 +563,7 @@ export default function Home({ params }: HomeProps) {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Starter Plan */}
-            <Card className="pricing-card relative dark:bg-gray-800 dark:border-gray-700">
+            <Card className="pricing-card relative dark:bg-muted border-input">
               <CardHeader>
                 <CardTitle className="text-xl font-semibold dark:text-white">
                   {t.pricing.starter.name}
@@ -578,7 +578,7 @@ export default function Home({ params }: HomeProps) {
                       </span>
                     )}
                   </span>
-                  <span className="text-gray-500 dark:text-gray-400 ml-1">
+                  <span className="text-gray-500 dark:text-muted-foreground ml-1">
                     {locale === "sv" ? "kr" : "$"}/
                     {isYearly
                       ? t.pricing.yearly.toLowerCase()
@@ -600,16 +600,16 @@ export default function Home({ params }: HomeProps) {
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full bg-red-600 hover:bg-red-700 text-white">
+                <Button className="w-full bg-primary hover:bg-red-700 text-white">
                   {t.pricing.getStarted}
                 </Button>
               </CardContent>
             </Card>
 
             {/* Professional Plan */}
-            <Card className="pricing-card relative border-red-200 dark:border-red-800 dark:bg-gray-800">
+            <Card className="pricing-card relative border-red-200 dark:border-red-800 bg-muted">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-red-600 text-white">
+                <Badge className="bg-primary text-white">
                   {t.pricing.professional.popular}
                 </Badge>
               </div>
@@ -627,7 +627,7 @@ export default function Home({ params }: HomeProps) {
                       </span>
                     )}
                   </span>
-                  <span className="text-gray-500 dark:text-gray-400 ml-1">
+                  <span className="text-gray-500 dark:text-muted-foreground ml-1">
                     {locale === "sv" ? "kr" : "$"}/
                     {isYearly
                       ? t.pricing.yearly.toLowerCase()
@@ -649,14 +649,14 @@ export default function Home({ params }: HomeProps) {
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full bg-red-600 hover:bg-red-700 text-white">
+                <Button className="w-full bg-primary hover:bg-red-700 text-white">
                   {t.pricing.getStarted}
                 </Button>
               </CardContent>
             </Card>
 
             {/* Enterprise Plan */}
-            <Card className="pricing-card relative dark:bg-gray-800 dark:border-gray-700">
+            <Card className="pricing-card relative dark:bg-muted border-input">
               <CardHeader>
                 <CardTitle className="text-xl font-semibold dark:text-white">
                   {t.pricing.enterprise.name}
@@ -694,10 +694,10 @@ export default function Home({ params }: HomeProps) {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section id="testimonials" className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="bg-red-100 dark:bg-red-950 text-red-800 dark:text-red-200 mb-4">
+            <Badge className="bg-primary/10 text-red-800 dark:text-red-200 mb-4">
               {t.testimonials.badge}
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -726,7 +726,7 @@ export default function Home({ params }: HomeProps) {
                     "{review.text}"
                   </p>
                   <div className="flex items-center">
-                    <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white font-semibold">
+                    <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-semibold">
                       {review.name
                         .split(" ")
                         .map((n) => n[0])
@@ -736,7 +736,7 @@ export default function Home({ params }: HomeProps) {
                       <div className="font-semibold text-gray-900 dark:text-white">
                         {review.name}
                       </div>
-                      <div className="text-sm text-gray-600 dark:text-gray-400">
+                      <div className="text-sm text-muted-foreground">
                         {review.role}
                       </div>
                     </div>
@@ -749,11 +749,11 @@ export default function Home({ params }: HomeProps) {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white dark:bg-gray-900">
+      <section id="contact" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <Badge className="bg-red-100 dark:bg-red-950 text-red-800 dark:text-red-200 mb-4">
+              <Badge className="bg-primary/10 text-red-800 dark:text-red-200 mb-4">
                 {t.contact.badge}
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -771,19 +771,19 @@ export default function Home({ params }: HomeProps) {
                   </h3>
                   <div className="space-y-4">
                     <div className="flex items-center">
-                      <Mail className="w-5 h-5 text-red-600 mr-3" />
+                      <Mail className="w-5 h-5 text-primary mr-3" />
                       <span className="text-gray-600 dark:text-gray-300">
                         hello@analytixpro.com
                       </span>
                     </div>
                     <div className="flex items-center">
-                      <Phone className="w-5 h-5 text-red-600 mr-3" />
+                      <Phone className="w-5 h-5 text-primary mr-3" />
                       <span className="text-gray-600 dark:text-gray-300">
                         +46 (0) 123-456-789
                       </span>
                     </div>
                     <div className="flex items-center">
-                      <MapPin className="w-5 h-5 text-red-600 mr-3" />
+                      <MapPin className="w-5 h-5 text-primary mr-3" />
                       <span className="text-gray-600 dark:text-gray-300">
                         Stockholm, Sweden
                       </span>
@@ -844,7 +844,7 @@ export default function Home({ params }: HomeProps) {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-red-600 hover:bg-red-700 text-white"
+                  className="w-full bg-primary hover:bg-red-700 text-white"
                 >
                   {t.contact.form.send}
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -856,21 +856,25 @@ export default function Home({ params }: HomeProps) {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 dark:bg-black text-white py-12">
+      <footer className="bg-black py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                   <BarChart3 className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-xl font-bold">AnalytiX Pro</span>
+                <span className="text-xl font-bold text-white">Kodoka</span>
               </div>
-              <p className="text-gray-400 text-sm">{t.footer.description}</p>
+              <p className="text-muted-foreground text-sm">
+                {t.footer.description}
+              </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">{t.footer.services}</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <h4 className="font-semibold mb-4 text-white">
+                {t.footer.services}
+              </h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
                     Google Analytics
@@ -894,8 +898,10 @@ export default function Home({ params }: HomeProps) {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">{t.footer.company}</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <h4 className="font-semibold mb-4 text-white">
+                {t.footer.company}
+              </h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
                     {t.footer.links.about}
@@ -922,8 +928,10 @@ export default function Home({ params }: HomeProps) {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">{t.footer.resources}</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <h4 className="font-semibold mb-4 text-white">
+                {t.footer.resources}
+              </h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
                     {t.footer.links.documentation}
@@ -947,7 +955,7 @@ export default function Home({ params }: HomeProps) {
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-muted-foreground">
             <p>{t.footer.copyright}</p>
           </div>
         </div>
